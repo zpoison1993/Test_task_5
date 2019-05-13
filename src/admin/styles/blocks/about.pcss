@@ -1,4 +1,8 @@
+.about {
+    width: 100%;
+}
 .about__container {
+    
     display: flex;
     flex-direction: column;
     @include phones() {
@@ -8,4 +12,35 @@
 
 .about__blocks {
     width: 100%;
+}
+
+.about__section-desc {
+    
+//    position: relative;
+    padding: 0;
+    .first__part {
+        font-size: 72px;
+    }
+    .img-alpinist__wrapper {
+        // position: absolute;
+        // top:0;
+        width: 100%;
+        display: flex;  
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+.img-alpinist {
+    // flex:0.5;
+    padding:0.5%;
+    object-fit: cover;
+    width: 50%;
+    height: 60%;
+    filter: grayscale(0.7);
+    &:hover{
+        filter: grayscale(0);
+        transform: scale(1.1);
+        transition: 0.5s;
+        z-index: 10;
+    }
 }

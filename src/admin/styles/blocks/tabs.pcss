@@ -1,10 +1,21 @@
+.tabs__container {
+    width: 100%;
+    
+}
 .tabs {
     display: flex;
+    flex-direction: column;
+    background: black;
+    opacity:0.7;
+    color: white;
+ 
 }
 .tabs__item {
     padding: 30px;
     @include phones() {
     padding: 30px 20px;
+    width: 100px;
+        z-index: 10;
     }
     // &:first-child{
     //     font-weight: 600;
@@ -13,4 +24,12 @@
     //     border-width: 0px 0px 5px 0px;
     //     border-color: $skills-color;
     // }
+}
+
+.router-link-active   {
+    color: white;
+}
+
+.router-link-exact-active {
+    color: white;
 }

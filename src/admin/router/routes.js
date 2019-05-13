@@ -3,28 +3,30 @@ export default [
       path: "/",
       component: () => import("../components/pages/aboutMe.vue"),
       meta: {
-        title: "Блок «Обо мне»"
+        title: "Добро пожаловать в элитный горный клуб CARABIN",
+        public: true
       }
     },
     {
       path: "/works",
       component: () => import("../components/pages/works2.vue"),
       meta: {
-        title: "Блок «Работы»"
+        title: "Регистрация"
       }
     },
     {
       path: "/reviews",
       component: () => import("../components/pages/reviews2.vue"),
       meta: {
-        title: "Блок «Отзывы»"
+        title: "Наша Команда"
       }
     },
     {
       path: "/login",
       component: () => import("../components/pages/login.vue"),
       meta: {
-        public: true
+        title: "Авторизация"
+        // public: true
       }
     }
   ];

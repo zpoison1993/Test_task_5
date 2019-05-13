@@ -1,6 +1,6 @@
 <template lang="pug">
   .edit-block
-    h3.edit-block__title Создать Отзыв
+    h3.edit-block__title Создать Пользователя
     form.edit-block__form.edit-block__form--reviews
       .form__upload-img.form__upload-img--reviews
         label.form__upload-img-wrapper
@@ -25,8 +25,8 @@
               for="name"
               :class="{'error' : validation.firstError('review.author')}"
             )
-              span.form__label Имя автора
-              input.form__input.form__input--name(type="text" name="name" placeholder="Введите имя автора" v-model="review.author")
+              span.form__label Ваш логин
+              input.form__input.form__input--name(type="text" name="name" placeholder="Введите Ваш логин" v-model="review.author")
               .form__text-error
                 error-tooltip(
                   :errorText="validation.firstError('review.author')"
@@ -36,8 +36,8 @@
               for="position"
               :class="{'error' : validation.firstError('review.occ')}"
             )
-              span.form__label Титул автора
-              input.form__input.form__input--position(type="text" name="position" placeholder="Введите титул автора" v-model="review.occ")
+              span.form__label Ваш пароль
+              input.form__input.form__input--position(type="password" name="position"  placeholder="Введите Ваш паролль" v-model="review.occ")
               .form__text-error
                 error-tooltip(
                   :errorText="validation.firstError('review.occ')"
@@ -48,8 +48,8 @@
               for="review"
               :class="{'error' : validation.firstError('review.text')}"
             )
-              span.form__label Отзыв
-              textarea.form__textarea(name="review" rows="4" placeholder="Введите Ваш отзыв" v-model="review.text")
+              span.form__label Жизненное кредо
+              textarea.form__textarea(name="review" rows="4" placeholder="Опишите то,что выделяет Вас из толпы" v-model="review.text")
               .form__text-error
                 error-tooltip(
                   :errorText="validation.firstError('review.text')"
@@ -85,13 +85,13 @@ export default {
       return Validator.value(value).required("Загрузите фотографию");
     },
     "review.author": value => {
-      return Validator.value(value).required("Введите имя автора");
+      return Validator.value(value).required("Введите логин");
     },
     "review.occ": value => {
-      return Validator.value(value).required("Введите титул автора");
+      return Validator.value(value).required("Введите пароль");
     },
     "review.text": value => {
-      return Validator.value(value).required("Введите отзыв");
+      return Validator.value(value).required("Введите информацию");
     }
   },
   components: {

@@ -7,12 +7,12 @@
         )
         .reviews-author__desc
           .reviews-author__name {{review.author}}
-          .reviews-author__position {{review.occ}}
+          // .reviews-author__position {{review.occ}}
     .reviews-block__content
       .reviews-block__desc
         p {{review.text}}
       .reviews-block__btns
-        button(type="button" @click="editReview").btn.btn--works-block-edit Править
+        // button(type="button" @click="editReview").btn.btn--works-block-edit Править
         button(type="button" @click="removeReview(review.id)").btn.btn--works-block-remove Удалить
 </template>
 

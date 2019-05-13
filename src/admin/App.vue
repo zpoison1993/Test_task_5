@@ -1,8 +1,9 @@
 <template lang="pug"> 
   .content-wrapper
-    appHeader(v-if="userIsLogged")
-    appTabs(v-if="userIsLogged")    
-    router-view
+    appHeader
+    .app-wrapper
+      appTabs  
+      router-view
 
 </template>
 

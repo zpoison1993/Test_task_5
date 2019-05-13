@@ -17,15 +17,19 @@ export default {
     return {
       routes: [
         {
-          title: "Обо мне",
+          title: "Главная",
           path: "/"
         },
         {
-          title: "Работы",
+          title: "Регистрация",
           path: "/works"
         },
         {
-          title: "Отзывы",
+          title: "Вход",
+          path: "/login"
+        },
+        {
+          title: "Команда",
           path: "/reviews"
         }
       ]
@@ -37,10 +41,10 @@ export default {
 <style lang="postcss">
 .router-link-exact-active {
         font-weight: 600;
-        color:$skills-color;
+        color:#676e80;
         border-style: solid;
         border-width: 0px 0px 5px 0px;
-        border-color: $skills-color;
+        border-color: $carabin-color;
 }
     
 </style>
